@@ -1,0 +1,194 @@
+
+-------------------
+Chapter 7:
+
+
+--Understanding How jQuery Animation Works--
+
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+   $(":submit").click(function(){
+      $("div").animate({
+	width:"280px",
+	height: "140px"
+
+      } );
+    });
+});
+</script>
+</head>
+<body>
+
+
+<div style="width:200px; height:200px; background-color: gray; border:10px">My div</div>
+<br />
+<input value="Animate" type="submit">
+</body>
+</html>
+
+--Animating height and width--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function(){
+   $("div").animate({
+	width:"20px", height: "50px"
+	});
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div style="width:200px; height:200px;
+background-color: gray; border:10px">My div</div>
+<br />
+<input value="Animate" type="submit"></body>
+</html>
+
+
+--Animating margin width and padding--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function(){
+   $("div").animate({
+	padding:"50px"
+	});
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div style="width:200px; height:200px;
+background-color: gray; border:10px">My div</div>
+<br />
+<input value="Animate" type="submit"></body>
+</html>
+
+--Animating opacity--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function(){
+   $(".fadethis").animate({
+        opacity: 0.25
+      });
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div class="fadethis" style="width:200px; height:200px;
+background-color: red; border:10px">My div</div>
+<br />
+<img class="fadethis" src = "images/home.gif" />
+<br />
+<input value="Animate" type="submit"></body>
+</html>
+
+--Animating font size and word spacing--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function(){
+   $("div").animate({
+        wordSpacing:"50px"
+      });
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>I'd like to say a few short words.</div>
+<br />
+<input value="Animate" type="submit"></body>
+</html>
+
+
+--Animating with Show, Hide, and Toggle--
+
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+   $(":submit").click(function(){
+      $("div").animate({
+	width:"toggle",
+      } );
+    });
+});
+</script>
+</head>
+<body>
+
+
+<div style="width:200px; height:200px; background-color: gray; border:10px">My div</div>
+<br />
+<input value="Animate" type="submit">
+</body>
+
+--Disabling All jQuery Animation--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("#gobtn").click(function(){
+   $("div").animate({
+        fontSize: "100px"
+      },3000);
+ });
+$("#stopbtn").click(function(){
+   $("div").stop();
+ });
+
+});
+</script>
+</head>
+<body>
+<div>I'd like to say a few short words.</div>
+<br />
+<input id="gobtn" value="Animate" type="submit"><br />
+<input id="stopbtn" value="Stop" type="submit"></body>
+</html>
+
+
+
+

@@ -1,0 +1,178 @@
+-------------------
+Chapter 6:
+
+--Sliding down--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').slideDown();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div style="display:none"><img src="images/big.gif" /> </div>
+<input value="Slide Down" type="submit">
+</body>
+</html>
+
+--Sliding up--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').slideUp();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div><img src="images/big.gif" /> </div>
+<input value="Slide Up" type="submit"></body>
+</html>
+
+--Sliding with a toggle effect--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').slideToggle();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div><img src="images/big.gif" /></div>
+<input value="Slide Toggle" type="submit">
+</body>
+</html>
+
+
+--Sliding with a callback function--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(':submit').click(function () {
+   $('div').slideToggle(
+function callback() {
+  alert('The slide effect is finished')
+});
+});
+
+
+});
+</script>
+</head>
+<body>
+<div><img src="images/big.gif" /></div>
+<input value="Slide Toggle" type="submit">
+</body>
+</html>
+
+--Fading in--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').fadeIn('fast');
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div style="display:none"><img src="images/big.gif" /> </div>
+<input value="Fade In" type="submit">
+</body>
+</html>
+
+--Fading out--
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').fadeOut();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div><img src="images/big.gif" /> </div>
+<input value="Fade Out" type="submit"></body>
+</html>
+
+--Partial fading--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').fadeTo('slow', .55);
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div><img src="images/big.gif" /> </div>
+<input value="Partial Fade" type="submit"></body>
+</html>
+
+

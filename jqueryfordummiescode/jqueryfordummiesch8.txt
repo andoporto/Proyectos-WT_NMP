@@ -1,0 +1,292 @@
+
+-------------------
+Chapter 8:
+
+
+--Getting and Setting Text Content--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ alert( $("div").text()  );
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>This is text from a div.</div>
+<div>This is text from a another div.</div>
+<br />
+<input value="Get Text" type="submit">
+</body>
+</html>
+
+--Second exercise--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("div").text("This is new text.") ;
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>This is text from a div.</div>
+<div>This is text from a another div.</div>
+<br />
+<input value="Set Text" type="submit">
+</body>
+</html>
+
+--Getting and Setting HTML Content--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ alert( $("#outer").html()  );
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div id="outer">
+<div>This is text from a div.</div>
+<img src = "images/home.gif" />
+<div>This is text from a another div.</div>
+</div>
+<br />
+<input value="Get HTML" type="submit">
+</body>
+</html>
+
+
+--Second exercise--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+$("#showcode").html( $("#outer").html());
+});	
+
+
+});
+</script>
+</head>
+<body>
+<div id="outer">
+<div>This is text from a div.</div>
+<img src = "images/home.gif" />
+<div>This is text from a another div.</div>
+</div>
+<br />
+<input value="Get HTML" type="submit">
+<div id="showcode"></div>
+</body>
+</html>
+
+--Getting and Setting Form Values--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":text").mouseout(function () {
+$("div").text( $(":text").val()  );
+ });	
+
+
+});
+</script>
+</head>
+<body>
+<input type = "text" />
+<div></div>
+</body>
+</html>
+
+--Second exercise--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("#colorselect").change(function () {
+$(":text").val( ( $(this).val()  ) );
+ });
+
+
+});
+</script>
+</head>
+<body>
+<input type = "text" />
+<select id="colorselect">
+<option>Red</option>
+<option>Green</option>
+<option>Yellow</option>
+</select>
+
+<div></div>
+</body>
+</html>
+
+--Appending content--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("div").append(" Lynn");
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>My name is</div>
+<br />
+<input value="Go" type="submit">
+
+</body>
+</html>
+
+--Prepending content--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("div").append(" Lynn");
+ $("div").prepend("<strong>Hi</strong>, ");
+});	
+
+
+});
+</script>
+</head>
+<body>
+<div>My name is</div>
+<br />
+<input value="Go" type="submit">
+</body>
+</html>
+
+
+--Inserting before and after--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("div").before("Before<br />");
+ $("div").after("<br />After");
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>Inside <img src = "images/home.gif" /> Inside</div>
+<br />
+<input value="Go" type="submit">
+</body>
+</html>
+
+--Moving Elements Around--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("div").insertBefore("img");
+  });
+
+
+});
+</script>
+</head>
+<body>
+<img src="images/home.gif" />
+<div>Move the house!</div>
+<br />
+<input value="Go" type="submit">
+</body>
+</html>
+
+
+--Wrapping Content Around an Element--
+
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+$("div").wrap("<div style=background-color:red;></div>");
+});
+});
+</script>
+</head>
+<body>
+<div>Color me red.</div>
+<br />
+<div>Me too.</div>
+<br />
+<input value="Go" type="submit">
+</body>
+</html>
+
+

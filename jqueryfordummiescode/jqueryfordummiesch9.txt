@@ -1,0 +1,211 @@
+
+-------------------
+Chapter 9:
+
+
+--Replacing an element with replaceWith()--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("p").replaceWith("<div>I am a div</div>") ;
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<p>It will be nice if <strong>this text</strong> and image <image src="images/home.gif" /> appear inside a gray div when the button is clicked.</p>
+<br />
+<input value="Replace" type="submit">
+</body>
+</html>
+
+--Replacing a parent element while retaining child elements--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("p").replaceWith("<div style=background-color:#aaaaaa>" + $("p").html() + "</div>") ;
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<p>It will be nice if <strong>this text</strong> and image <image src="images/home.gif" /> appear inside a gray div when the button is clicked.</p>
+<br />
+<input value="Replace" type="submit">
+</body>
+</html>
+
+
+--Replacing an element with replaceAll()--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("<div style=background-color:#aaaaaa>" + $("p").html() + "</div>").replaceAll("p") ;
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<p>It will be nice if <strong>this text</strong> and image <image src="images/home.gif" /> appear inside a gray div when the button is clicked.</p>
+<br />
+<input value="Replace" type="submit">
+</body>
+</html>
+
+
+--Removing elements--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("strong").remove() ;
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<strong>Remove me.</strong>
+<br />
+<em>Don't remove me.</em>
+<br />
+Remove the extra word <strong>here</strong> in this sentence.
+<input value="Remove" type="submit">
+</body>
+</html>
+
+--Removing content--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("strong").remove() ;
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<div> Outside <em> Outside <strong> Inside <p> Inside </p> Inside </strong> Outside </em> Outside </div>
+<input value="Empty" type="submit">
+</body>
+</html>
+
+
+--Copying Elements--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(":submit").click(function () {
+ $("img").clone().insertAfter("p");
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<img src = "images/home.gif" />
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<input value="Copy" type="submit">
+</body>
+</html>
+
+
+--Copying elements and their events--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("img").mouseover(
+function() {alert("mouseover");
+ });
+$(":submit").click(function () {
+$("img").clone(true).insertAfter("p");
+ });
+
+
+
+});
+</script>
+</head>
+<body>
+<img src = "images/home.gif" />
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<p>Put an image after this line.</p>
+<input value="Copy" type="submit">
+</body>
+</html>
+
+
+

@@ -1,0 +1,218 @@
+-------------------
+Chapter 5:
+
+--Hiding an element by type with a button--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').hide();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>This will be hidden.</div>
+<div>This will be hidden.</div>
+<input value="Hide" type="submit">
+</body>
+</html>
+
+--Hiding an element by id when clicked--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('#hideme').click(function () {
+      $('#hideme').hide();
+});
+
+
+});
+</script>
+</head>
+<body>
+<div id="hideme">This will be hidden.</div>
+<div>This will not be hidden.</div>
+</body>
+</html>
+
+--Hiding an element with animation--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+   $('#slowhide').hide('slow');
+	$('#fasthide').hide('fast');
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div id="slowhide">This will be hidden slowly.</div>
+<div id="fasthide">This will be hidden quickly.</div>
+<div>This will not be hidden.</div>
+
+<input value="Hide" type="submit">
+</body>
+</html>
+
+--Showing an element by id--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+   $('#showme').show();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div id="showme"  style="display:none">This will appear.</div>
+<input value="Show" type="submit"></body>
+</html>
+
+--Showing an element with animation--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+   $('#slowshow').show(2000);
+	$('#fastshow').show(500);
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div id="slowshow" style="display:none">This will be shown slowly.</div>
+<div id="fastshow" style="display:none">This will be shown quickly.</div>
+<input value="Show" type="submit">
+</body>
+</html>
+
+--Using a toggle--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').toggle();
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>This will be hidden.</div>
+<div style="display:none">This is initially hidden.</div>
+<input value="Toggle" type="submit">
+</body>
+</html>
+
+--Toggling with animation--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+      $('div').toggle('slow');
+ });
+
+
+});
+</script>
+</head>
+<body>
+<div>This will be an animated toggle.</div>
+<input value="Toggle" type="submit">
+</body>
+</html>
+
+
+--Using a callback function--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>My Test Page</title>
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(':submit').click(function () {
+   $('div').toggle('slow',
+function callback() {
+  alert('The toggle is finished')
+});
+});
+
+
+});
+</script>
+</head>
+<body>
+<div>This will be an animated toggle.</div>
+<input value="Toggle" type="submit">
+</body>
+</html>
+
+
+
+
+
